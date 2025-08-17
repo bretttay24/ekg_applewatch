@@ -88,7 +88,7 @@ def make_ekg_image(ekg_value_df, meta_data):
     meta_data_dic = meta_data
     ekg_df = ekg_value_df.astype(float)
 
-    output_dir = 'apple_health_exports/watch_ekgs'
+    output_dir = 'apple_health_export/watch_ekgs'
     os.makedirs(output_dir, exist_ok=True)
     print(f"Saving 3 EKG images to the '{output_dir}' directory...")
     saved_image_paths = [] # This list will have .png file paths appended in the loop below
