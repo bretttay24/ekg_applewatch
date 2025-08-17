@@ -13,7 +13,7 @@ if len(sys.argv) != 2:
 
 
 
-model_path = 'EKG_CNN_1.keras'   # this variable will be used to upload pretrained CNN below
+model_path = 'EKG_CNN.keras'   # this variable will be used to upload pretrained CNN below
 class_names = ['Atrial Flutter', 'Atrial Fibrillation', 'Sinus Arrhythmia', 'Sinus Bradycardia', 'Sinus Rhythm', 'Sinus Tachycardia', 'Supraventricular Tachycardia']
 # Model prediction Index/Identification
     #AF -> 0
