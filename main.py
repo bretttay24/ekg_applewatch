@@ -45,7 +45,7 @@ class_names = [
     #SR -> 4
     #ST -> 5
     #SVT -> 6
-LLM_MODEL = 'ekgllm-gemma'   # This is an ollama llm based on phi3:mini that I put a system prompt into. Find system prompt in ekgmodelfile
+LLM_MODEL = 'ekgllama3'   # This is an ollama llm based on phi3:mini that I put a system prompt into. Find system prompt in ekgmodelfile
 
 file_path = sys.argv[1]
 
