@@ -203,17 +203,7 @@ def CNNpredict_from_image(ekg_saved_image_paths, model_path, class_names):
 
 
 
-def open_file(filepath):
 
-    """
-    Opens a file with the default application for the current OS.
-    """
-    if sys.platform == "win32":
-        os.startfile(filepath)
-    elif sys.platform == "darwin": # macOS
-        subprocess.run(["open", filepath])
-    else: # Linux
-        subprocess.run(["xdg-open", filepath])
  
         
         
