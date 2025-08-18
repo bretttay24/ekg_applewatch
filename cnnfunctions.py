@@ -11,6 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import tensorflow as tf
+import ollama
 
 
 
@@ -90,7 +91,7 @@ def make_ekg_image(ekg_value_df, meta_data):
 
     output_dir = 'apple_health_export/watch_ekgs'
     os.makedirs(output_dir, exist_ok=True)
-    print(f"Saving 3 EKG images to the '{output_dir}' directory...")
+    
     saved_image_paths = [] # This list will have .png file paths appended in the loop below
 
     # --- Constants ---
@@ -200,6 +201,62 @@ def CNNpredict_from_image(ekg_saved_image_paths, model_path, class_names):
         predictions.append(result)
 
     return predictions
+
+def format_report(apple_data, cnn_prediction_label):
+    """
+    Formats the Apple and CNN data into a single string report.
+
+    Args:
+        apple_data (dict): The dictionary of metadata from the Apple EKG.
+        cnn_prediction_label (str): The final, confident prediction from the CNN.
+
+    Returns:
+        A single, multi-line string containing the formatted report.
+    """
+    # Using .get() is safer than ['key'] as it won't crash if a key is missing
+    date = apple_data.get('date', 'N/A')
+    apple_rhythm = apple_data.get('rhythm', 'N/A')
+    symptoms = apple_data.get('symptom', 'N/A')
+
+    report_string = f"""
+========== REPORT ==========
+
+--- Apple Data ---
+------------------
+
+Date : {date}
+Apple Rhythm ID: {apple_rhythm}
+Reported Symptoms: {symptoms}
+
+--- CNN EKG Predictions ---
+-----------------------------
+CNN Rhythm ID: {cnn_prediction_label}
+
+========== END REPORT ==========
+"""
+    return report_string
+
+
+
+def get_llm_interpretation(report_string, model_name='ekgllm'):
+    """
+    Sends a report string to a local Ollama model and gets an interpretation.
+    Assumes the model has a built-in system prompt.
+    """
+    print(f"\nSending report to LLM ({model_name})...")
+    
+    try:
+        # The system prompt is no longer needed here; it's in the Modelfile
+        response = ollama.chat(
+            model=model_name,
+            messages=[
+                {'role': 'user', 'content': report_string},
+            ]
+        )
+        return response['message']['content']
+        
+    except Exception as e:
+        return f"Error communicating with Ollama: {e}"
 
 
 
