@@ -4,14 +4,14 @@ import sys
 import tensorflow as tf
 import os
 
-# --- ADD THIS BLOCK TO CONFIGURE GPU MEMORY ---
+
 # This prevents TensorFlow from allocating all VRAM at once
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
     try:
         for gpu in gpus:
             tf.config.experimental.set_memory_growth(gpu, True)
-        print(f"✅ TensorFlow memory growth enabled for {len(gpus)} GPU(s).")
+        print(f"TensorFlow memory growth enabled for {len(gpus)} GPU(s).")
     except RuntimeError as e:
         # Memory growth must be set before GPUs have been initialized
         print(e)
@@ -45,7 +45,7 @@ class_names = [
     #SR -> 4
     #ST -> 5
     #SVT -> 6
-LLM_MODEL = 'ekgllama3'   # This is an ollama llm based on phi3:mini that I put a system prompt into. Find system prompt in ekgmodelfile
+LLM_MODEL = 'ekgllama3'   # This is an ollama llm based on llama3 that I put a system prompt into. Find system prompt in ekgmodelfile
 
 file_path = sys.argv[1]
 
