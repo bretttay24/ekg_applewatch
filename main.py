@@ -60,11 +60,11 @@ if extracted_data:
 
         if cnn_predictions:
             all_labels = [result['prediction'] for result in cnn_predictions] # This creates a list of the three predicted labels from the 3 10 second EKGs
-            prediction = "CNN has inconsitent predictions of EKG"  # This will print if CNN has more than 1 identified prediction from the 3 ekgs
+            prediction = str(all_labels) # This will print if CNN has more than 1 identified prediction from the 3 ekgs
           
             if len(set(all_labels)) == 1:    # Checks to see if all labels are the same by putting them in a set
                 prediction = all_labels[0]   # create single prediction variable 
-                
+            
 
             report_to_send = format_report(apple_labels, prediction)  # Generates the inital report to send to LLM 
                                                                       # LLM has system prompt designed for the report input
