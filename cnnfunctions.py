@@ -243,7 +243,7 @@ def get_llm_interpretation(report_string, model_name='ekgllm'):
     Sends a report string to a local Ollama model and gets an interpretation.
     Assumes the model has a built-in system prompt.
     """
-    print(f"\nSending report to LLM ({model_name})...")
+    
     
     try:
         # The system prompt is no longer needed here; it's in the Modelfile
