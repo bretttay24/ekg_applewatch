@@ -55,7 +55,7 @@ This project was designed with a strong emphasis on ethical AI principles for an
 6. **CNN Prediction**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'CNNpredict_from_image' function loads the pre-trained Keras CNN model (created in step 2), preprocesses the EKG images, and predicts the heart rhythm for each of the 3 images. 
 7. **Report Formatting**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'format_report' function takes the Apple Watch data and the CNN's prediction and formats them into a readable report.
 8. **LLM Interpretation**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'get_llm_interpretation' function sends the formatted report to a locally running 'ekgllm' model and gets an interpretation of the results.
-    * ollama.ipynb [ollama_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/ollama.ipynb)
+    * ollama.ipynb [ollama_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ollama_llm.ipynb)
 9. **Main Script**([main.py](https://github.com/bretttay24/ekg_applewatch/blob/main/main.py))**:** The 'main.py' script ties it all together and orchestrates the entire workflow from data extraction to the final report generation (This file does not create the EKG dataset or create a CNN in steps 1 and 2)
 
 #### To Run in the WSL/Ubuntu CLI Examples
