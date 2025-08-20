@@ -1,4 +1,9 @@
-# EKG Analysis with Deep Learning and Generateive AI
+# **EKG Analysis with Deep Learning and Generateive AI**
+<p align="center">
+  <img src="notebooks/images/Screenshot_tensorflow.png" alt="TensorFlow" width="60"/>
+  <img src="notebooks/images/Screenshot_ekgapp.png" alt="AppleEKG" width="60"/>
+  <img src="notebooks/images/Screenshot_ollama.jpeg" alt="Ollama" width="60"/>
+</p>
 
 ## About Me
 I'm a Registered Nurse (RN) with experience in a variety of hospital settings since 2017, most recently in a Cardiac ICU. This project is an example of my curiosity about the intersection of healthcare and artificial intelligence. Having spent a significant portion of my AI ethics course exploring the ethical considerations of AI in health wearable devices, I was inspired to create a project that not only explores the technical aspects of AI but also adheres to key ethical principles.
@@ -36,7 +41,7 @@ This project was designed with a strong emphasis on ethical AI principles for an
 
 ## How it works
 1. **Create an EKG image dataset:** (This is over 10,000+ images) using the open-source 12-lead EKG data cited.
-    * create_ecg_csv_extract_lead_1.ipynb [create_csv_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/   create_ecg_csv_extract_lead_1.ipynb)
+    * create_ecg_csv_extract_lead_1.ipynb [create_csv_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ecg_csv_extract_lead_1.ipynb)
     * create_ecg_image_dataset.ipynb [create_images_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ecg_image_dataset.ipynb)
 
 2. **Create/train/evaluate a local CNN:**  This will use the image datasets created above.
@@ -47,19 +52,22 @@ This project was designed with a strong emphasis on ethical AI principles for an
 6. **CNN Prediction**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'CNNpredict_from_image' function loads the pre-trained Keras CNN model (created in step 2), preprocesses the EKG images, and predicts the heart rhythm for each of the 3 images. 
 7. **Report Formatting**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'format_report' function takes the Apple Watch data and the CNN's prediction and formats them into a readable report.
 8. **LLM Interpretation**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'get_llm_interpretation' function sends the formatted report to a locally running 'ekgllm' model and gets an interpretation of the results.
-* Link to ollama notebook
+    * Link to ollama notebook
 9. **Main Script**([main.py](https://github.com/bretttay24/ekg_applewatch/blob/main/main.py))**:** The 'main.py' script ties it all together and orchestrates the entire workflow from data extraction to the final report generation (This file does not create the EKG dataset or create a CNN in steps 1 and 2)
 
 #### To Run in the WSL/Ubuntu CLI Examples
 
 """
 CLI:
-(virtual-env) wsluser@yoga:~/workspace/github.com/github_username/ekg_applewatch$ python3 main.py export1.zip
+
+*(virtual-env) wsluser@yoga:~/workspace/github.com/github_username/ekg_applewatch$ python3 main.py export1.zip
+
 
 After the $ symbol you pass the arguments: "python3" "main.py" "your_apple_export.zip" (see example above)
+
 """
 
-**Dataset Citation:**
+#### **Dataset Citation:**
 
 Zheng, Jianwei; Rakovski, Cyril; Danioko, Sidy; Zhang, Jianming; Yao, Hai; Hangyuan, Guo (2019). A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.4560497
 
