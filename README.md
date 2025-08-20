@@ -20,8 +20,8 @@ The project shows how to:
 * Generate a EKG report that combines the Apple Watch data, the CNN's predictions, and the LLM interpretation.
 
 The goal is to provide an entry-level understanding of how to use data from Apple Watch wearable devices, apply deep learning concepts, and leverage generative AI in a responsible and ethical manner.
-## Disclaimer!
-**This is not a medical device.**  The information provided by this project is for **educational and informational purposes only** and should not be used for medical diagnosis or treatment. Always consult with a qualified healthcare professional for any health concerns or before making any decisions related to your health or treatment.
+## **Disclaimer!**
+**This is not a medical device.**  The information provided by this project is for **educational and informational purposes only** and should not be used for medical diagnosis or treatment. Always consult with a qualified healthcare professional for any health concerns or before making any decisions related to your health or treatment.  
 
 #### Technologies Used
 * **WSL/Ubuntu CLI** Where the project files were ran and the **EKG report is generated**.
