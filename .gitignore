@@ -5,5 +5,5 @@ __pycache__
 export1.zip
 notebooks/downloads
 notebooks/datasets
-notebooks/images
+notebooks/images/ignore
 Downloaded_sources/
