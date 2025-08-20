@@ -50,6 +50,7 @@ This project was designed with a strong emphasis on ethical AI principles for an
 2. **Create/train/evaluate a local CNN:**  This will use the image datasets created above.
     * create_ekg_cnn.ipynb [create_cnn_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ekg_cnn.ipynb)
 3. **Export Apple Health app data** This will create a large export.zip file.
+    * appleData_export.ipynb [export_apple_health](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/appleData_export.ipynb)
 4. **Extract Data**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'extract_ekg_and_data' function uzips the Apple Health export.zip file, finds the most recent EKG CSV file, and extracts the raw EKG values.
 5. **Apple Watch EKG image creation**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:**  The 'make_ekg_image' function takes the 30 seconds of EKG values and creates 3 seperate 10-second EKG strip images which are saved as PNG files. 
 6. **CNN Prediction**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'CNNpredict_from_image' function loads the pre-trained Keras CNN model (created in step 2), preprocesses the EKG images, and predicts the heart rhythm for each of the 3 images. 
