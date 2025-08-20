@@ -18,7 +18,7 @@ The project shows how to:
 * Extract and process EKG data from an Apple Health export.zip file from the Apple Health app.
 * Create a dataset of 10,000+ EKG images from the open-source 12-lead arrhythmia EKG dataset.
 * Build, train, and evaluate a Convolutional Neural Network (CNN) to classify EKG rhythms using the created dataset of EKG images.
-* Utilize a locally run Large Language Model(LLM) with a custom system prompt to interpret results.
+* Utilize a locally run Large Language Model (LLM) with a custom system prompt to interpret results.
 * Generate an EKG report that combines the Apple Watch data, the CNN's predictions, and the LLM interpretation.
 
 The goal is to provide an entry-level understanding of how to use data from Apple Watch wearable devices, apply deep learning concepts, and leverage generative AI in a responsible and ethical manner.
@@ -35,8 +35,8 @@ The goal is to provide an entry-level understanding of how to use data from Appl
 
 ## Ethical Considerations
 This project was designed with a strong emphasis on ethical AI principles for an AI ethics course.
-* **Privacy:** By using a locally run LLM(Ollama) along with a locally trained CNN, all data processing and analysis happens on a local machine.  Apart from the Apple Health app and EKG app to obtain the data, no sensitive health data is sent to the cloud for further EKG insights.
-* **Autonomy:** The project aims to empower Apple Watch users to be in control of their data and undetstand their personal health. This project seeks to distill the amazing capabilities of CNNs and LLMs to regular users at home to run locally and privately. The generated report has the potential (though not proven) ability to identify more heart rhythms than the Apple Watch currently does and may provide more information about the identified rhythm.  This project still routes users to their healthcare providers. 
+* **Privacy:** By using a locally run LLM (Ollama) along with a locally trained CNN, all data processing and analysis happens on a local machine.  Apart from the Apple Health app and EKG app to obtain the data, no sensitive health data is sent to the cloud for further EKG insights.
+* **Autonomy:** The project aims to empower Apple Watch users to be in control of their data and understand their personal health. This project seeks to distill the amazing capabilities of CNNs and LLMs to regular users at home to run locally and privately. The generated report has the potential (though not proven) ability to identify more heart rhythms than the Apple Watch currently does and may provide more information about the identified rhythm.  This project still routes users to their healthcare providers. 
 * **Transparency:**
     * This project is open-source, with all code and notebooks available.
     * The notebooks provide explanations of how the dataset was created, how the CNN model was trained, how to export Apple Watch Health app data as an export.zip, and how to download local LLM through Ollama and set the system prompt. 
