@@ -1,9 +1,9 @@
 # **EKG Analysis with Deep Learning and Generateive AI**
 <p align="center">
   <img src="notebooks/images/Screenshot_tensorflow.png" alt="TensorFlow" width="90"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="notebooks/images/Screenshot_ekgapp.png" alt="AppleEKG" width="90"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="notebooks/images/Screenshot_ollama.jpeg" alt="Ollama" width="90"/>
 </p>
 
@@ -69,11 +69,35 @@ After the $ symbol you pass the arguments: "python3" "main.py" "your_apple_expor
 
 """
 
-#### **Dataset Citation:**
+## Example 10 second EKG Images
+#### Color
+<img src="notebooks/images/Screenshot_rhythmColor.jpeg" alt="EKG_Color" width="150"/>
 
-Zheng, Jianwei; Rakovski, Cyril; Danioko, Sidy; Zhang, Jianming; Yao, Hai; Hangyuan, Guo (2019). A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.4560497
+#### No Color
+<img src="notebooks/images/Screenshot_rhythmNoColor.jpeg" alt="EKG_NoColor" width="150"/>
 
-Zheng, Jianwei (2019). ECGDataDenoised.zip. figshare. Dataset. https://doi.org/10.6084/m9.figshare.8378291.v1
+#### Example of Different Arrythmias
+<img src="notebooks/images/Screenshot_rhythmgraph.jpeg" alt="EKG_multiple" width="150"/>
 
-Zheng, Jianwei (2019). Diagnostics.xlsx. figshare. Dataset. https://doi.org/10.6084/m9.figshare.8360408.v2
+## About My CNN Model Performance:
+#### Training Accuracy
+<img src="notebooks/images/Screenshot_cnntrainingaccuracy.jpeg" alt="CNN_training_accuracy" width="150"/>
+
+#### Training Loss
+<img src="notebooks/images/Screenshot_cnntrainingloss.jpeg" alt="CNN_training_loss" width="150"/>
+
+#### CNN Classification Report
+<img src="notebooks/images/Screenshot_classificationreport.jpeg" alt="Classification Report" width="150"/>
+
+#### CNN Confusion Matrix
+<img src="notebooks/images/Screenshot_cm.jpeg" alt="confusion_matrix" width="150"/>
+
+
+### **Dataset Citation:**
+
+* Zheng, Jianwei; Rakovski, Cyril; Danioko, Sidy; Zhang, Jianming; Yao, Hai; Hangyuan, Guo (2019). A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.4560497
+
+* Zheng, Jianwei (2019). ECGDataDenoised.zip. figshare. Dataset. https://doi.org/10.6084/m9.figshare.8378291.v1
+
+* Zheng, Jianwei (2019). Diagnostics.xlsx. figshare. Dataset. https://doi.org/10.6084/m9.figshare.8360408.v2
 
