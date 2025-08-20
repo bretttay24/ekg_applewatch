@@ -71,26 +71,26 @@ After the $ symbol you pass the arguments: "python3" "main.py" "your_apple_expor
 
 ## Example 10 second EKG Images
 #### Color
-<img src="notebooks/images/Screenshot_rhythmColor.jpeg" alt="EKG_Color" width="150"/>
+<img src="notebooks/images/Screenshot_rhythmColor.jpeg" alt="EKG_Color" width="400"/>
 
 #### No Color
-<img src="notebooks/images/Screenshot_rhythmNoColor.jpeg" alt="EKG_NoColor" width="150"/>
+<img src="notebooks/images/Screenshot_rhythmNoColor.jpeg" alt="EKG_NoColor" width="400"/>
 
 #### Example of Different Arrythmias
-<img src="notebooks/images/Screenshot_rhythmgraph.jpeg" alt="EKG_multiple" width="150"/>
+<img src="notebooks/images/Screenshot_rhythmgraph.jpeg" alt="EKG_multiple" width="400"/>
 
 ## About My CNN Model Performance:
 #### Training Accuracy
-<img src="notebooks/images/Screenshot_cnntrainingaccuracy.jpeg" alt="CNN_training_accuracy" width="150"/>
+<img src="notebooks/images/Screenshot_cnntrainingaccuracy.jpeg" alt="CNN_training_accuracy" width="400"/>
 
 #### Training Loss
-<img src="notebooks/images/Screenshot_cnntrainingloss.jpeg" alt="CNN_training_loss" width="150"/>
+<img src="notebooks/images/Screenshot_cnntrainingloss.jpeg" alt="CNN_training_loss" width="400"/>
 
 #### CNN Classification Report
-<img src="notebooks/images/Screenshot_classificationreport.jpeg" alt="Classification Report" width="150"/>
+<img src="notebooks/images/Screenshot_classificationreport.jpeg" alt="Classification Report" width="400"/>
 
 #### CNN Confusion Matrix
-<img src="notebooks/images/Screenshot_cm.jpeg" alt="confusion_matrix" width="150"/>
+<img src="notebooks/images/Screenshot_cm.jpeg" alt="confusion_matrix" width="400"/>
 
 
 ### **Dataset Citation:**
