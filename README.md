@@ -11,19 +11,20 @@
 I'm a Registered Nurse (RN) with experience in a variety of hospital settings since 2017, most recently in a Cardiac ICU. This project is an example of my curiosity about the intersection of healthcare and artificial intelligence. Having spent a significant portion of my AI ethics course exploring the ethical considerations of AI in health wearable devices, I was inspired to create a project that not only explores the technical aspects of AI but also adheres to key ethical principles.
 
 ## Project Overview
-This project demonstrates a workflow for analyzing electrocadiogram (EKG or ECG) data from an Apple Watch.  It shows how to:
+This project demonstrates a workflow for analyzing electrocardiogram (EKG or ECG) data from an Apple Watch.  
+The project shows how to:
 * Extract and process EKG data from an Apple Health export.zip file from the Apple Health app.
 * Create a dataset of 10,000+ EKG images from the open-source 12-lead arrhythmia EKG dataset.
-* Build, train, and evaluate a Convelutional Neural Network (CNN) to classify EKG rhythms using your created dataset of EKG images.
-* Utilize a locally run Large Language Model(LLM) wtih a custom system prompt to interpret results.
-* Generate a EKG report that combines the Apple WAtch data, the CNN's predictions, and the LLM interpretation.
+* Build, train, and evaluate a Convelutional Neural Network (CNN) to classify EKG rhythms using the created dataset of EKG images.
+* Utilize a locally run Large Language Model(LLM) with a custom system prompt to interpret results.
+* Generate a EKG report that combines the Apple Watch data, the CNN's predictions, and the LLM interpretation.
 
-The goal is to provide an entry-level understanding of how to use data from Apple watch wearable devices, apply deep learning concepts, and leverage generative AI in a responsible and ethical manner.
+The goal is to provide an entry-level understanding of how to use data from Apple Watch wearable devices, apply deep learning concepts, and leverage generative AI in a responsible and ethical manner.
 ## Disclaimer!
 **This is not a medical device.**  The information provided by this project is for **educational and informational purposes only** and should not be used for medical diagnosis or treatment. Always consult with a qualified healthcare professional for any health concerns or before making any decisions related to your health or treatment.
 
 #### Technologies Used
-* **WSL/Ubuntu CLI** Where the project files were ran and the EKG report is generated.
+* **WSL/Ubuntu CLI** Where the project files were ran and the **EKG report is generated**.
 * **Python:** The primary programming Language for this project.
 * **TensorFlow/Keras:** For building and traing the CNN model.
 * **Pandas:** For data manipulation and analysis. 
@@ -32,14 +33,14 @@ The goal is to provide an entry-level understanding of how to use data from Appl
 
 ## Ethical Considerations
 This project was designed with a strong emphasis on ethical AI principles for an AI ethics course.
-* **Privacy:** By using a locally run LLM(Ollama) along with a locally trained CNN, all data processing and analysis happens on your won machine.  Apart from the Apple Health app and EKG app to obtain the data, No sensitive health data is sent to the cloud for further EKG insights.
-* **Autonomy:** The project aims to empower Apple Watch users to be in control of thier data and undestand thier personal health. This project seeks to distill the amazing capbilities of CNNs and LLMs to regular users at home to run locally.  The generated report has the potential (though not proven) ability to identify more heart rhythms than the Apple watch currently does and may provide more information about the identified rhythm.  This project still routes users to their healthcare providers. 
+* **Privacy:** By using a locally run LLM(Ollama) along with a locally trained CNN, all data processing and analysis happens on a local machine.  Apart from the Apple Health app and EKG app to obtain the data, no sensitive health data is sent to the cloud for further EKG insights.
+* **Autonomy:** The project aims to empower Apple Watch users to be in control of thier data and undestand thier personal health. This project seeks to distill the amazing capbilities of CNNs and LLMs to regular users at home to run locally and privately. The generated report has the potential (though not proven) ability to identify more heart rhythms than the Apple Watch currently does and may provide more information about the identified rhythm.  This project still routes users to their healthcare providers. 
 * **Tranaprency:**
     * This project is open-source, with all code and notebooks available.
     * The notebooks provide explanations of how the dataset was created, how the CNN model was trained, how to export Apple Watch Health app data as an export.zip, how to download local LLM through Ollama and set the system prompt. 
     * Citations and links for the open-sourced dataset used. 
-    * A clear disclaimer is included, stating that this porject is not a medeical device and should not be used for medical diagnosis. 
-* **Decency and Non-Domination (inspired by Todd May):** The project seeks to distill knowledge and empower individuals without being domineering. It provides information and analysis, but emphasizes that it is not a substitute for professional medical advice. The goal is to assist and educate, not to dictate or replace the role of a qualified healthcare professional.
+    * A clear disclaimer is included, stating that this project is not a medical device and should not be used for medical diagnosis. 
+* **Decency and Non-Domination (inspired by Todd May's Decency Principle):** The project seeks to distill knowledge and empower individuals without being domineering. It provides information and analysis, but emphasizes that it is not a substitute for professional medical advice. The goal is to assist and educate, not to dictate or replace the role of a qualified healthcare professional.
 
 ## How it works
 1. **Create an EKG image dataset:** (This is over 10,000+ images) using the open-source 12-lead EKG data cited.
@@ -92,6 +93,8 @@ After the $ symbol you pass the arguments: "python3" "main.py" "your_apple_expor
 #### CNN Confusion Matrix
 <img src="notebooks/images/Screenshot_cm.jpeg" alt="confusion_matrix" width="600"/>
 
+#### Example of CLI report output after running the script
+<img src="" alt="generated_report" width="900"/>
 
 ### **Dataset Citation:**
 
