@@ -1,8 +1,10 @@
 # **EKG Analysis with Deep Learning and Generateive AI**
 <p align="center">
-  <img src="notebooks/images/Screenshot_tensorflow.png" alt="TensorFlow" width="60"/>
-  <img src="notebooks/images/Screenshot_ekgapp.png" alt="AppleEKG" width="60"/>
-  <img src="notebooks/images/Screenshot_ollama.jpeg" alt="Ollama" width="60"/>
+  <img src="notebooks/images/Screenshot_tensorflow.png" alt="TensorFlow" width="90"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="notebooks/images/Screenshot_ekgapp.png" alt="AppleEKG" width="90"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="notebooks/images/Screenshot_ollama.jpeg" alt="Ollama" width="90"/>
 </p>
 
 ## About Me
@@ -46,13 +48,13 @@ This project was designed with a strong emphasis on ethical AI principles for an
 
 2. **Create/train/evaluate a local CNN:**  This will use the image datasets created above.
     * create_ekg_cnn.ipynb [create_cnn_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ekg_cnn.ipynb)
-3. **Export Apple Health app data** This will create a large export.zip file
+3. **Export Apple Health app data** This will create a large export.zip file.
 4. **Extract Data**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'extract_ekg_and_data' function uzips the Apple Health export.zip file, finds the most recent EKG CSV file, and extracts the raw EKG values.
 5. **Apple Watch EKG image creation**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:**  The 'make_ekg_image' function takes the 30 seconds of EKG values and creates 3 seperate 10-second EKG strip images which are saved as PNG files. 
 6. **CNN Prediction**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'CNNpredict_from_image' function loads the pre-trained Keras CNN model (created in step 2), preprocesses the EKG images, and predicts the heart rhythm for each of the 3 images. 
 7. **Report Formatting**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'format_report' function takes the Apple Watch data and the CNN's prediction and formats them into a readable report.
 8. **LLM Interpretation**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'get_llm_interpretation' function sends the formatted report to a locally running 'ekgllm' model and gets an interpretation of the results.
-    * Link to ollama notebook
+    * ollama.ipynb [ollama_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/ollama.ipynb)
 9. **Main Script**([main.py](https://github.com/bretttay24/ekg_applewatch/blob/main/main.py))**:** The 'main.py' script ties it all together and orchestrates the entire workflow from data extraction to the final report generation (This file does not create the EKG dataset or create a CNN in steps 1 and 2)
 
 #### To Run in the WSL/Ubuntu CLI Examples
