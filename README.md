@@ -36,8 +36,8 @@ This project was designed with a strong emphasis on ethical AI principles for an
 
 ## How it works
 1.**Create an EKG image dataset:** (This is over 10,000+ images) using the open-source 12-lead EKG data cited.
-    - create_ecg_csv_extract_lead_1.ipynb [create_csv_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/   create_ecg_csv_extract_lead_1.ipynb)
-    - create_ecg_image_dataset.ipynb [create_images_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ecg_image_dataset.ipynb)
+    + create_ecg_csv_extract_lead_1.ipynb [create_csv_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/   create_ecg_csv_extract_lead_1.ipynb)
+    + create_ecg_image_dataset.ipynb [create_images_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ecg_image_dataset.ipynb)
 
 2. **Create/train/evaluate a local CNN:**  This will use the image datasets created above.
     * create_ekg_cnn.ipynb [create_cnn_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ekg_cnn.ipynb)
