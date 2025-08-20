@@ -2,7 +2,7 @@
 <p align="center">
   <img src="notebooks/images/Screenshot_tensorflow.png" alt="TensorFlow" width="90"/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="images/apple_health_logo.jpg" alt="Health_logo" width="200"/>
+  <img src="images/apple_health_logo.jpg" alt="Health_logo" width="90"/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="notebooks/images/Screenshot_ekgapp.png" alt="AppleEKG" width="90"/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
