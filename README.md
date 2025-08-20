@@ -93,7 +93,7 @@ After the $ symbol you pass the arguments: "python3" "main.py" "your_apple_expor
 #### CNN Confusion Matrix
 <img src="notebooks/images/Screenshot_cm.jpeg" alt="confusion_matrix" width="600"/>
 
-#### Example of CLI report output after running the script
+### Example of CLI Generated Report 
 <img src="notebooks/images/generated_report.jpg" alt="generated_report" width="700"/>
 
 ### **Dataset Citation:**
