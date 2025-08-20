@@ -35,12 +35,12 @@ This project was designed with a strong emphasis on ethical AI principles for an
 * **Decency and Non-Domination (inspired by Todd May):** The project seeks to distill knowledge and empower individuals without being domineering. It provides information and analysis, but emphasizes that it is not a substitute for professional medical advice. The goal is to assist and educate, not to dictate or replace the role of a qualified healthcare professional.
 
 ## How it works
-1.**Create an EKG image dataset:** (This is over 10,000+ images) using the open-source 12-lead EKG data cited.
-* create_ecg_csv_extract_lead_1.ipynb [create_csv_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/   create_ecg_csv_extract_lead_1.ipynb)
-* create_ecg_image_dataset.ipynb [create_images_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ecg_image_dataset.ipynb)
+1. **Create an EKG image dataset:** (This is over 10,000+ images) using the open-source 12-lead EKG data cited.
+    * create_ecg_csv_extract_lead_1.ipynb [create_csv_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/   create_ecg_csv_extract_lead_1.ipynb)
+    * create_ecg_image_dataset.ipynb [create_images_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ecg_image_dataset.ipynb)
 
 2. **Create/train/evaluate a local CNN:**  This will use the image datasets created above.
-* create_ekg_cnn.ipynb [create_cnn_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ekg_cnn.ipynb)
+    * create_ekg_cnn.ipynb [create_cnn_notebook](https://github.com/bretttay24/ekg_applewatch/blob/main/notebooks/create_ekg_cnn.ipynb)
 3. **Export Apple Health app data** This will create a large export.zip file
 4. **Extract Data**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:** The 'extract_ekg_and_data' function uzips the Apple Health export.zip file, finds the most recent EKG CSV file, and extracts the raw EKG values.
 5. **Apple Watch EKG image creation**([cnnfunctions.py](https://github.com/bretttay24/ekg_applewatch/blob/main/cnnfunctions.py))**:**  The 'make_ekg_image' function takes the 30 seconds of EKG values and creates 3 seperate 10-second EKG strip images which are saved as PNG files. 
@@ -50,7 +50,8 @@ This project was designed with a strong emphasis on ethical AI principles for an
 * Link to ollama notebook
 9. **Main Script**([main.py](https://github.com/bretttay24/ekg_applewatch/blob/main/main.py))**:** The 'main.py' script ties it all together and orchestrates the entire workflow from data extraction to the final report generation (This file does not create the EKG dataset or create a CNN in steps 1 and 2)
 
-####To Run in the WSL/Ubuntu CLI Examples
+#### To Run in the WSL/Ubuntu CLI Examples
+
 """
 CLI:
 (virtual-env) wsluser@yoga:~/workspace/github.com/github_username/ekg_applewatch$ python3 main.py export1.zip
