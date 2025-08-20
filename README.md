@@ -94,7 +94,7 @@ After the $ symbol you pass the arguments: "python3" "main.py" "your_apple_expor
 <img src="notebooks/images/Screenshot_cm.jpeg" alt="confusion_matrix" width="600"/>
 
 #### Example of CLI report output after running the script
-<img src="" alt="generated_report" width="900"/>
+<img src="notebooks/images/generated_report.jpg" alt="generated_report" width="700"/>
 
 ### **Dataset Citation:**
 
