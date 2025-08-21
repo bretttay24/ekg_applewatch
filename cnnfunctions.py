@@ -18,13 +18,13 @@ import ollama
 def extract_ekg_and_data(file_path):
     """
     The goal of this function is to take a file_path string argumentand extract an EKG file.
-    From that EKG file create a ekg dataframe and pull relevant information from ekg dataframe.
+    From that EKG file create an EKG dataframe and pull relevant information from the EKG dataframe.
 
     - Returns: EKG_df (dataframe of graphable values), meta_data(dictionary) 
     - Process:
-    1) Unzip the file to output director
+    1) Unzip the file to output directory
     2) Find most recent .csv in electrocardiogram folder
-    3) Change most recent EKG.CSV to EKG dataframe 
+    3) Change most recent EKG.CSV to an EKG dataframe 
     4) Extract EKG values from EKG_df to be graphed 
     5) Create meta_data dictionary from relevant EKG_df values in head of ekg_df
     6) Return EKG values to be graphed in dataframe format, return meta_data dictionary
@@ -83,7 +83,7 @@ def extract_ekg_and_data(file_path):
 def make_ekg_image(ekg_value_df, meta_data):
     """
     This function takes a dataframe of ekg values and meta_data,
-    graphs the values, and creates 3 separate 10-second .png files.
+    graphs the values, and creates 3 separate 10 second .png files.
     It returns the file names in list format.
     """
     meta_data_dic = meta_data
@@ -111,7 +111,7 @@ def make_ekg_image(ekg_value_df, meta_data):
     for i in range(num_strips):
         strip_num = i + 1  # This will be 1, 2, 3 for the filenames
 
-        # --- 1. Slice the data for the current 10-second strip ---
+        # --- 1. Slice the data for the current 10 second strip ---
         start_index = i * samples_per_strip
         end_index = (i + 1) * samples_per_strip
         
@@ -157,7 +157,7 @@ def CNNpredict_from_image(ekg_saved_image_paths, model_path, class_names):
     each EKG image in the ekg_image_path_list. 
 
     Arguments: 
-        - ekg_image_path_list (list): A list of file paths for the .png images of EKGs from apple watch
+        - ekg_image_path_list (list): A list of file paths for the .png images of EKGs from an Apple Watch
         - model_path (str): The file path to the saved .keras model
         - class_names (list): This is a list of strings that map the identified class label (0-7) to heart rhythm (SR, Afib, AF, etc)
 
@@ -208,7 +208,7 @@ def format_report(apple_data, cnn_prediction_label):
 
     Args:
         apple_data (dict): The dictionary of metadata from the Apple EKG.
-        cnn_prediction_label (str): The final, confident prediction from the CNN.
+        cnn_prediction_label (str): The final, prediction from the CNN.
 
     Returns:
         A single, multi-line string containing the formatted report.

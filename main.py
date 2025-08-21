@@ -18,9 +18,9 @@ if gpus:
 
 if len(sys.argv) != 2:
     message = """ 
-    When using Command line call main.py and appleexport.zip (health file you export from apple health)
+    When using Command line call main.py and export.zip (health file you export from apple health)
     Format CLI Usage: python3 main.py <path_to_zip_file>
-    example: python3 main.py apple_health_exports/Health1.zip
+    example: python3 main.py Health1.zip
     """
     print(message)
     sys.exit(1)
@@ -66,12 +66,12 @@ if extracted_data:
                 prediction = all_labels[0]   # create single prediction variable 
             
 
-            report_to_send = format_report(apple_labels, prediction)  # Generates the inital report to send to LLM 
+            report_to_send = format_report(apple_labels, prediction)  # Generates the initial report to send to LLM 
                                                                       # LLM has system prompt designed for the report input
 
             llm_response = get_llm_interpretation(report_to_send, model_name=LLM_MODEL) # Calls function for cnn functions.py
                                                                                         # inputs report created above
-                                                                                        # calls our custom llm defined in a varable above LLM_MODEL
+                                                                                        # calls our custom llm defined in a variable above LLM_MODEL
 
             disclaimer = """
 I am not a LLM for medical diagnosis. I cannot diagnose heart attacks. 

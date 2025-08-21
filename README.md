@@ -39,7 +39,7 @@ This project was designed with a strong emphasis on ethical AI principles for an
 * **Autonomy:** The project aims to empower Apple Watch users to be in control of their data and understand their personal health. This project seeks to distill the amazing capabilities of CNNs and LLMs to regular users at home to run locally and privately. The generated report has the potential (though not proven) ability to identify more heart rhythms than the Apple Watch currently does and may provide more information about the identified rhythm.  This project still routes users to their healthcare providers. 
 * **Transparency:**
     * This project is open-source, with all code and notebooks available.
-    * The notebooks provide explanations of how the dataset was created, how the CNN model was trained, how to export Apple Watch Health app data as an export.zip, and how to download local LLM through Ollama and set the system prompt. 
+    * The notebooks provide explanations of how the dataset was created, how the CNN model was trained, how to export Apple Watch Health app data as an export.zip, and how to download a local LLM through Ollama and set the system prompt. 
     * Citations and links for the open-sourced dataset used. 
     * A clear disclaimer is included, stating that this project is not a medical device and should not be used for medical diagnosis. 
 * **Decency and Non-Domination (inspired by Todd May's Decency Principle):** The project seeks to distill knowledge and empower individuals without being domineering. It provides information and analysis, but emphasizes that it is not a substitute for professional medical advice. The goal is to assist and educate, not to dictate or replace the role of a qualified healthcare professional.
@@ -80,7 +80,7 @@ After the $ symbol you pass the arguments: "python3" "main.py" "your_apple_expor
 #### No Color
 <img src="notebooks/images/Screenshot_rhythmNoColor.jpeg" alt="EKG_NoColor" width="600"/>
 
-#### Example of Different Arrythmias
+#### Example of Different Arrhythmias
 <img src="notebooks/images/Screenshot_rhythmgraph.jpeg" alt="EKG_multiple" width="800"/>
 
 ## About My CNN Model Performance:
