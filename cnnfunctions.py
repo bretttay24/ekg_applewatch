@@ -17,7 +17,7 @@ import ollama
 
 def extract_ekg_and_data(file_path):
     """
-    The goal of this function is to take a file_path string argumentand extract an EKG file.
+    The goal of this function is to take a file_path string argument and extract an EKG file.
     From that EKG file create an EKG dataframe and pull relevant information from the EKG dataframe.
 
     - Returns: EKG_df (dataframe of graphable values), meta_data(dictionary) 
@@ -55,9 +55,6 @@ def extract_ekg_and_data(file_path):
         
     csv_files.sort() # Sorts the list alphabetically by filename
     latest_csv_path = csv_files[-1] # Get the very last item from the sorted list
-
-    #print(f"Found latest EKG file: {latest_csv_path.name}")
-    #print(f"Will proceed to create a dataframe of EKG data from {latest_csv_path.name}")
 
     # --- 3) Change EKG.CSV to dataframe ---
     ekg_df = pd.read_csv(latest_csv_path)
@@ -213,7 +210,6 @@ def format_report(apple_data, cnn_prediction_label):
     Returns:
         A single, multi-line string containing the formatted report.
     """
-    # Using .get() is safer than ['key'] as it won't crash if a key is missing
     date = apple_data.get('date', 'N/A')
     apple_rhythm = apple_data.get('rhythm', 'N/A')
     symptoms = apple_data.get('symptom', 'N/A')
@@ -246,7 +242,6 @@ def get_llm_interpretation(report_string, model_name='ekgllm'):
     
     
     try:
-        # The system prompt is no longer needed here; it's in the Modelfile
         response = ollama.chat(
             model=model_name,
             messages=[
